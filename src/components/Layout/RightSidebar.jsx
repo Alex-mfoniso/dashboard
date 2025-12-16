@@ -1,6 +1,19 @@
 import React from 'react';
+// Import the necessary Font Awesome components and specific icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faPhoneAlt, 
+    faVideo, 
+    faEllipsisH, 
+    faPaperclip, 
+    faMicrophone 
+} from '@fortawesome/free-solid-svg-icons'; 
+import { 
+    faCircleCheck,
+    faFaceSmile
+} from '@fortawesome/free-regular-svg-icons';
 
-// Mock data for the activity feed (Updated with status colors and file styling)
+// Mock data for the activity feed 
 const activityFeed = [
     { 
         user: "Floyd Miles", 
@@ -8,8 +21,8 @@ const activityFeed = [
         action: "Commented on Stark Project", 
         time: "10:15 AM", 
         message: "Hi! Next week we'll start a new project. I'll tell you all the details later",
-        // FIX: Replaced Pinterest embed link with a working placeholder image
-        avatar: "https://via.placeholder.com/150/5050C0/FFFFFF?text=FM", 
+        // FIX: Using reliable local path. Ensure a mock image exists at this path.
+        avatar: "/images/avatars/floyd.png", 
         statusDotColor: "bg-red-500"
     },
     { 
@@ -23,7 +36,8 @@ const activityFeed = [
             icon: "F", 
             iconStyle: "bg-black text-white rounded-md font-sans"
         },
-        avatar: "https://via.placeholder.com/150/FFA500/FFFFFF?text=GH",
+        // FIX: Using reliable local path. Ensure a mock image exists at this path.
+        avatar: "/images/avatars/guy.png", 
         statusDotColor: "bg-green-500"
     },
     { 
@@ -31,10 +45,12 @@ const activityFeed = [
         handle: "@kristinw", 
         action: "Commented on 7Heros Project", 
         time: "10:15 AM", 
-        avatar: "https://via.placeholder.com/150/FF0000/FFFFFF?text=KW",
+        // FIX: Using reliable local path. Ensure a mock image exists at this path.
+        avatar: "/images/avatars/kristin.png", 
         statusDotColor: "bg-red-500"
     },
 ];
+
 const RightSidebar = () => {
     return (
         <div className="w-80 h-full bg-white flex flex-col shadow-lg">
@@ -42,7 +58,8 @@ const RightSidebar = () => {
             {/* 1. User Profile Card (Top Section) */}
             <div className="p-6 bg-gray-50 text-center border-b border-gray-200">
                 <img 
-                    src="https://via.placeholder.com/150/FFC0CB/000000?text=MN" 
+                    // FIX: Using reliable local path for the user avatar
+                    src="/images/avatars/megan.png" 
                     alt="Megan Norton" 
                     className="w-20 h-20 rounded-full object-cover mx-auto mb-3 border-4 border-white shadow-md"
                 />
@@ -50,15 +67,15 @@ const RightSidebar = () => {
                 <p className="text-sm text-gray-500 mb-4">@megnorton</p>
                 
                 {/* Contact/Action Buttons */}
-                <div className="flex justify-center space-x-3"> {/* Increased space-x for buttons */}
+                <div className="flex justify-center space-x-3">
                     <button className="p-3 bg-white rounded-full text-gray-600 shadow-sm hover:bg-gray-100">
-                        <i className="fas fa-phone-alt"></i> {/* Call icon */}
+                        <FontAwesomeIcon icon={faPhoneAlt} />
                     </button>
                     <button className="p-3 bg-white rounded-full text-gray-600 shadow-sm hover:bg-gray-100">
-                        <i className="fas fa-video"></i> {/* Video icon */}
+                        <FontAwesomeIcon icon={faVideo} />
                     </button>
                     <button className="p-3 bg-white rounded-full text-gray-600 shadow-sm hover:bg-gray-100">
-                        <i className="fas fa-ellipsis-h"></i> {/* More options icon */}
+                        <FontAwesomeIcon icon={faEllipsisH} />
                     </button>
                 </div>
             </div>
@@ -78,7 +95,7 @@ const RightSidebar = () => {
                                 alt={activity.user} 
                                 className="w-10 h-10 rounded-full object-cover"
                             />
-                            {/* Status Dot: Use dynamic statusDotColor */}
+                            {/* Status Dot */}
                             <span className={`absolute bottom-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white ${activity.statusDotColor}`}></span>
                         </div>
                         
@@ -96,7 +113,6 @@ const RightSidebar = () => {
                             {activity.message && (
                                 <div className="relative p-3 mt-2 bg-blue-50 rounded-xl rounded-tl-none text-sm text-gray-800">
                                     {activity.message}
-                                    {/* The small thumb icon */}
                                     <span className="absolute bottom-0 right-0 transform translate-x-1 translate-y-1 p-1 bg-white rounded-full shadow-sm">
                                         👍
                                     </span>
@@ -105,9 +121,9 @@ const RightSidebar = () => {
 
                             {/* File Bubble */}
                             {activity.file && (
-                                <div className="flex items-center justify-between p-3 mt-2 bg-white rounded-xl text-sm border border-gray-200"> {/* Changed background for contrast */}
+                                <div className="flex items-center justify-between p-3 mt-2 bg-white rounded-xl text-sm border border-gray-200">
                                     <div className="flex items-center space-x-3">
-                                        {/* File Icon (Stylized Figma 'F') */}
+                                        {/* File Icon (Figma 'F') */}
                                         <span className={`p-1 w-6 h-6 flex items-center justify-center rounded-md text-xs ${activity.file.iconStyle}`}>
                                             {activity.file.icon}
                                         </span>
@@ -116,8 +132,8 @@ const RightSidebar = () => {
                                             <p className="text-xs text-gray-500">{activity.file.size}</p>
                                         </div>
                                     </div>
-                                    {/* Replaced cloud-arrow-down with the circular check icon */}
-                                    <i className="fa-regular fa-circle-check text-blue-600"></i>
+                                    {/* FIX: Use FontAwesomeIcon component */}
+                                    <FontAwesomeIcon icon={faCircleCheck} className="text-blue-600" />
                                 </div>
                             )}
                         </div>
@@ -127,16 +143,16 @@ const RightSidebar = () => {
             
             {/* 3. Messaging Input (Bottom) */}
             <div className="p-4 border-t border-gray-100 bg-white">
-                <div className="flex items-center bg-gray-50 p-3 rounded-xl border border-gray-200"> {/* Changed to rounded-xl to match image */}
-                    <i className="fas fa-paperclip text-gray-400 mr-3"></i>
+                <div className="flex items-center bg-gray-50 p-3 rounded-xl border border-gray-200">
+                    <FontAwesomeIcon icon={faPaperclip} className="text-gray-400 mr-3" />
                     <input 
                         type="text" 
                         placeholder="Write a message" 
                         className="flex-grow bg-transparent focus:outline-none text-sm"
                     />
-                    <div className="flex space-x-3 ml-3 text-gray-400"> {/* Increased space-x for icons */}
-                        <i className="fa-regular fa-face-smile"></i> {/* Used fa-regular for lighter style */}
-                        <i className="fas fa-microphone"></i>
+                    <div className="flex space-x-3 ml-3 text-gray-400">
+                        <FontAwesomeIcon icon={faFaceSmile} />
+                        <FontAwesomeIcon icon={faMicrophone} />
                     </div>
                 </div>
             </div>
