@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Home,
   LayoutGrid,
@@ -92,6 +91,7 @@ const Sidebar = () => {
 
     </div>
   );
+
 };
 
 export default Sidebar;

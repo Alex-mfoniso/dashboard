@@ -1,3 +1,4 @@
+
 import { Calendar } from "lucide-react";
 
 const Header = () => {
@@ -18,7 +19,6 @@ const Header = () => {
 
       <div className="flex items-center space-x-6">
         <span className="text-sm font-medium text-gray-500">{currentDate}</span>
-
         <button className="p-3 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition duration-150 flex items-center justify-center">
           <Calendar />
         </button>

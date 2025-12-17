@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RecentOrders = ({ orders }) => {
-  // Helper function for status styling
+ 
   const getStatusClass = (status) => {
     switch (status) {
       case 'Completed':

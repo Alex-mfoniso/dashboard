@@ -32,6 +32,7 @@ const taskData = [
 ]
 
 const CurrentTasks = () => {
+
   const tasks = taskData
 
   return (

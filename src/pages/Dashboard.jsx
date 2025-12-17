@@ -1,12 +1,24 @@
-"use client"
 
-import { useState, useEffect } from "react"
-import Sidebar from "../components/Layout/Sidebar"
-import Header from "../components/Layout/Header"
-import InfoCard from "../components/Cards/InfoCard"
+"use client"
+import React, { useState, useEffect } from 'react';
+import Sidebar from '../components/Layout/Sidebar';
+import Header from '../components/Layout/Header';
+import InfoCard from '../components/Cards/InfoCard';
+import LineChart from '../components/Charts/LineChart';
+import RecentOrders from '../components/Widgets/RecentOrders';
+import CurrentTasks from '../components/Widgets/CurrentTasks';
+// Import the new RightSidebar component
+import RightSidebar from '../components/Layout/RightSidebar'; 
+// Icon components to map JSON icon class strings to React components
+import { ThumbsUp, Timer, TrendingUp } from 'lucide-react';
+
+// import {  useEffect } from "react"
+// import Sidebar from "../components/Layout/Sidebar"
+// import Header from "../components/Layout/Header"
+// import InfoCard from "../components/Cards/InfoCard"
 import PerformanceChart from "../components/Charts/PerfomanceChart"
-import CurrentTasks from "../components/Widgets/CurrentTasks"
-import RightSidebar from "../components/Layout/RightSidebar"
+// import CurrentTasks from "../components/Widgets/CurrentTasks"
+// import RightSidebar from "../components/Layout/RightSidebar"
 import data from "../data/dashboardData.json"
 
 const Dashboard = () => {
@@ -25,6 +37,9 @@ const Dashboard = () => {
   }
 
   const { summaryCards, mainChartData } = dashboardData
+
+  // Render static InfoCard components instead of reading titles/values from JSON
+  // This keeps the cards identical to the design example (Finished / Tracked / Efficiency)
 
   return (
     <div className="flex">
