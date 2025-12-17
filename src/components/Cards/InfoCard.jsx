@@ -1,50 +1,28 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-
-const InfoCard = ({ icon: Icon, title, value, change, changeType }) => {
-  const isPositive = changeType === 'positive';
+const InfoCard = ({ title, value, change, changeType, icon }) => {
+  const isPositive = changeType === "positive"
+  const changeColorClass = isPositive ? "text-green-500" : "text-red-500"
+  const changeIconClass = isPositive ? "fa-solid fa-play fa-rotate-270" : "fa-solid fa-play fa-rotate-90"
 
   return (
-   
-    <div className="w-full flex items-center gap-4 pr-10 mr-10 border-r border-gray-100 last:border-r-0 last:pr-0 last:mr-0">
-      
-      {/* 1. Icon Circle */}
-      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-gray-50">
-        {typeof Icon === 'string' ? (
-          <i className={`${Icon} text-gray-900 text-lg`} aria-hidden="true"></i>
-        ) : (
-          <Icon className="h-5 w-5 text-gray-900" strokeWidth={1.5} />
-        )}
+    <div className="bg-white rounded-xl p-4 flex items-center space-x-4 border border-gray-100">
+      <div className="p-4 w-14 h-14 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0">
+        <i className={`${icon} text-xl text-gray-800`}></i>
       </div>
 
-      {/* 2. Text Content */}
-      <div className="flex flex-col">
-        <span className="text-sm font-semibold text-gray-900 mb-0.5">{title}</span>
-        
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-gray-900 leading-none">
-            {value}
+      <div className="flex-grow">
+        <p className="text-sm font-medium text-gray-800 mb-1">{title}</p>
+
+        <div className="flex items-end space-x-2">
+          <p className="text-2xl font-bold text-gray-900 leading-none">{value}</p>
+
+          <span className={`text-xs font-semibold ${changeColorClass} flex items-center leading-none`}>
+            <i className={`${changeIconClass} mr-1 text-xs`} style={{ fontSize: "0.6rem" }}></i>
+            <span className="text-sm">{change}</span>
           </span>
-          
-          {/* 3. Trend Indicator with solid Triangle (Play) */}
-          {change && (
-            <div
-              className={`flex items-center gap-1 text-[13px] font-bold ${
-                isPositive ? 'text-emerald-400' : 'text-rose-500'
-              }`}
-            >
-              <Play
-                fill="currentColor"
-                size={8}
-                className={`${isPositive ? '-rotate-90' : 'rotate-90'}`}
-              />
-              <span>{change}</span>
-            </div>
-          )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default InfoCard;
+export default InfoCard

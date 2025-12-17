@@ -1,40 +1,26 @@
-import React from 'react';
-// Import the Calendar icon from Lucide
-import { Calendar } from 'lucide-react';
+
+import { Calendar } from "lucide-react";
 
 const Header = () => {
-  const currentDate = new Date().toLocaleDateString('en-GB', { 
-    day: 'numeric', 
-    month: 'short', 
-    year: 'numeric' 
+  const currentDate = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
   });
 
   return (
-    <header 
-      className="fixed top-0 left-64 w-[calc(100%-256px-320px)] bg-white h-24 flex items-center justify-between px-10 z-10"
-    >
-      
-      {/* 1. Greeting and Status Message */}
-      <div className="flex flex-col">
-        <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
-          Hello, Margaret
-        </h1>
-        <p className="text-slate-400 font-medium mt-1">
+    <header className="fixed top-0 left-64 w-[calc(100%-256px-320px)] bg-white shadow-sm h-20 flex items-center justify-between px-8 z-10">
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900">Hello, Margaret</h1>
+        <p className="text-sm text-gray-500 mt-1">
           Track team progress here. You almost reach a goal!
         </p>
       </div>
 
-      {/* 2. Date and Action Button */}
       <div className="flex items-center space-x-6">
-        
-        {/* Date Display */}
-        <span className="text-sm font-semibold text-slate-600">
-          {currentDate}
-        </span>
-        
-        {/* Action Button (Calendar icon) */}
-        <button className="p-3 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-slate-100 text-slate-900 transition-all duration-200 shadow-sm">
-          <Calendar size={20} strokeWidth={2.5} />
+        <span className="text-sm font-medium text-gray-500">{currentDate}</span>
+        <button className="p-3 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition duration-150 flex items-center justify-center">
+          <Calendar />
         </button>
       </div>
     </header>
