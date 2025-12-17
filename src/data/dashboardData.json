@@ -1,51 +1,91 @@
 {
   "summaryCards": [
-    { 
-      "id": 1, 
-      "title": "Total Sales", 
-      "value": "$45,231", 
-      "change": "+5.2%", 
+    {
+      "id": 1,
+      "title": "Finished",
+      "value": "18",
+      "change": "+8 tasks",
       "changeType": "positive",
-      "icon": "fas fa-sack-dollar" 
+      "icon": "fa-solid fa-check"
     },
-    { 
-      "id": 2, 
-      "title": "Total Traffic", 
-      "value": "25,489", 
-      "change": "-1.8%", 
+    {
+      "id": 2,
+      "title": "Tracked",
+      "value": "31h",
+      "change": "-6 hours",
       "changeType": "negative",
-      "icon": "fas fa-chart-line" 
+      "icon": "fa-solid fa-clock"
     },
-    { 
-      "id": 3, 
-      "title": "New Customers", 
-      "value": "1,200", 
-      "change": "+12.1%", 
+    {
+      "id": 3,
+      "title": "Efficiency",
+      "value": "93%",
+      "change": "+12%",
       "changeType": "positive",
-      "icon": "fas fa-user-plus" 
-    },
-    { 
-      "id": 4, 
-      "title": "Avg. Order Value", 
-      "value": "$185.00", 
-      "change": "+3.4%", 
-      "changeType": "positive",
-      "icon": "fas fa-cart-shopping" 
+      "icon": "fa-solid fa-gauge-high"
     }
   ],
   "mainChartData": [
-    {"name": "Jan", "Sales": 4000, "Traffic": 2400},
-    {"name": "Feb", "Sales": 3000, "Traffic": 1398},
-    {"name": "Mar", "Sales": 2000, "Traffic": 9800},
-    {"name": "Apr", "Sales": 2780, "Traffic": 3908},
-    {"name": "May", "Sales": 1890, "Traffic": 4800},
-    {"name": "Jun", "Sales": 2390, "Traffic": 3800},
-    {"name": "Jul", "Sales": 3490, "Traffic": 4300}
+    {
+      "name": "01",
+      "Sales": 6,
+      "Traffic": 4
+    },
+    {
+      "name": "02",
+      "Sales": 5,
+      "Traffic": 6
+    },
+    {
+      "name": "03",
+      "Sales": 7,
+      "Traffic": 6
+    },
+    {
+      "name": "04",
+      "Sales": 6,
+      "Traffic": 7
+    },
+    {
+      "name": "05",
+      "Sales": 7,
+      "Traffic": 5
+    },
+    {
+      "name": "06",
+      "Sales": 8,
+      "Traffic": 6
+    },
+    {
+      "name": "07",
+      "Sales": 9,
+      "Traffic": 8
+    }
   ],
   "recentOrders": [
-    {"id": "ORD-001", "customer": "A. Johnson", "amount": 120.50, "status": "Completed"},
-    {"id": "ORD-002", "customer": "B. Smith", "amount": 89.99, "status": "Pending"},
-    {"id": "ORD-003", "customer": "C. Davis", "amount": 450.00, "status": "Completed"},
-    {"id": "ORD-004", "customer": "D. White", "amount": 22.10, "status": "Canceled"}
+    {
+      "id": "ORD-001",
+      "customer": "A. Johnson",
+      "amount": 120.5,
+      "status": "Completed"
+    },
+    {
+      "id": "ORD-002",
+      "customer": "B. Smith",
+      "amount": 89.99,
+      "status": "Pending"
+    },
+    {
+      "id": "ORD-003",
+      "customer": "C. Davis",
+      "amount": 450.0,
+      "status": "Completed"
+    },
+    {
+      "id": "ORD-004",
+      "customer": "D. White",
+      "amount": 22.1,
+      "status": "Canceled"
+    }
   ]
 }
