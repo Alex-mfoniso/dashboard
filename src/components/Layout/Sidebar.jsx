@@ -30,9 +30,7 @@ const Sidebar = () => {
             
             {/* 1. Logo */}
             <div className="flex items-center space-x-2 pb-10">
-                {/* <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <div className="w-4 h-4 border-2 border-white rounded-sm"></div>
-                </div> */}
+         
                 <span className="text-xl font-bold text-gray-900 tracking-tight">logip</span>
             </div>
 

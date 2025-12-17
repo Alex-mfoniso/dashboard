@@ -45,7 +45,7 @@ const activityFeed = [
 
 const RightSidebar = () => {
     return (
-        /* Fixed to top of viewport so the component starts at the very top of the screen */
+      
         <div className="w-80 h-screen fixed top-0 right-0 bg-white flex flex-col border-l border-slate-100 shadow-sm">
             
             {/* 1. User Profile Card (Fixed Height) */}
@@ -75,8 +75,7 @@ const RightSidebar = () => {
 
             <hr className="mx-8 border-slate-50 flex-shrink-0" />
 
-            {/* 2. Activity Feed (Scrollable Section) */}
-            {/* FIX: flex-1 ensures this section takes up all remaining space between profile and input */}
+        
             <div className="p-6 flex-1 overflow-y-auto min-h-0 custom-scrollbar">
                 <h3 className="text-center text-[11px] font-bold text-slate-400 uppercase tracking-[2px] mb-8">
                     Recent Activity
@@ -126,7 +125,7 @@ const RightSidebar = () => {
                 ))}
             </div>
             
-            {/* 3. Messaging Input (Fixed to bottom) */}
+            {/* 3. Messaging Input*/}
             <div className="p-6 bg-white border-t border-slate-50 flex-shrink-0">
                 <div className="flex items-center bg-slate-50 px-4 py-3 rounded-2xl border border-slate-100 focus-within:border-blue-200 transition-all">
                     <Paperclip size={18} className="text-slate-400 cursor-pointer hover:text-slate-600" />

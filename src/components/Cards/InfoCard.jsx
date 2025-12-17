@@ -5,7 +5,7 @@ const InfoCard = ({ icon: Icon, title, value, change, changeType }) => {
   const isPositive = changeType === 'positive';
 
   return (
-    /* The outer container uses pr-10 and border-r to create the visual separator line */
+   
     <div className="w-full flex items-center gap-4 pr-10 mr-10 border-r border-gray-100 last:border-r-0 last:pr-0 last:mr-0">
       
       {/* 1. Icon Circle */}

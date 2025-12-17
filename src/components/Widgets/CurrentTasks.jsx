@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Define the structure for a task item
+
 const taskData = [
     {
         id: 1,
@@ -37,8 +37,7 @@ const taskData = [
 
 
 const CurrentTasks = () => {
-    // You would typically fetch this data and pass it via props, 
-    // but we'll use local mock data for simplicity here.
+   
     const tasks = taskData; 
 
     return (

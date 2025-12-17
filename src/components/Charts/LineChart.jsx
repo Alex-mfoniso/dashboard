@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  LineChart as RechartsLineChart, // <--- Rename the Recharts import to avoid conflict (optional, but good practice)
+  LineChart as RechartsLineChart, 
   Line, 
   XAxis, 
   YAxis, 
@@ -52,7 +52,7 @@ const PerformanceChart = ({ data }) => {
               axisLine={false} 
               tickLine={false} 
               width={35} // Give space for the labels
-              stroke="#9ca3af" // gray-400
+              stroke="#9ca3af"
             />
 
             <Tooltip /> 
@@ -85,4 +85,4 @@ const PerformanceChart = ({ data }) => {
   );
 };
 
-export default PerformanceChart; // <-- Export the new name
+export default PerformanceChart; 
