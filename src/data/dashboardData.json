@@ -1,0 +1,51 @@
+{
+  "summaryCards": [
+    { 
+      "id": 1, 
+      "title": "Total Sales", 
+      "value": "$45,231", 
+      "change": "+5.2%", 
+      "changeType": "positive",
+      "icon": "fas fa-sack-dollar" 
+    },
+    { 
+      "id": 2, 
+      "title": "Total Traffic", 
+      "value": "25,489", 
+      "change": "-1.8%", 
+      "changeType": "negative",
+      "icon": "fas fa-chart-line" 
+    },
+    { 
+      "id": 3, 
+      "title": "New Customers", 
+      "value": "1,200", 
+      "change": "+12.1%", 
+      "changeType": "positive",
+      "icon": "fas fa-user-plus" 
+    },
+    { 
+      "id": 4, 
+      "title": "Avg. Order Value", 
+      "value": "$185.00", 
+      "change": "+3.4%", 
+      "changeType": "positive",
+      "icon": "fas fa-cart-shopping" 
+    }
+  ],
+  "mainChartData": [
+    {"name": "Jan", "Sales": 4000, "Traffic": 2400},
+    {"name": "Feb", "Sales": 3000, "Traffic": 1398},
+    {"name": "Mar", "Sales": 2000, "Traffic": 9800},
+    {"name": "Apr", "Sales": 2780, "Traffic": 3908},
+    {"name": "May", "Sales": 1890, "Traffic": 4800},
+    {"name": "Jun", "Sales": 2390, "Traffic": 3800},
+    {"name": "Jul", "Sales": 3490, "Traffic": 4300}
+  ],
+  "recentOrders": [
+    {"id": "ORD-001", "customer": "A. Johnson", "amount": 120.50, "status": "Completed"},
+    {"id": "ORD-002", "customer": "B. Smith", "amount": 89.99, "status": "Pending"},
+    {"id": "ORD-003", "customer": "C. Davis", "amount": 450.00, "status": "Completed"},
+    {"id": "ORD-004", "customer": "D. White", "amount": 22.10, "status": "Canceled"}
+  ]
+}
